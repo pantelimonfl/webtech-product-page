@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    background-color: white;
+    margin-left:auto;
+    margin-right: auto;
+    width:800px;
+}
+
+.product-image img{
+    max-width:400px;
+    max-height: auto;
+}
+
+.product-main{
+    display: inline-flex;
+    max-width: 800px;
+}
+
+.product-main-info{
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+}
+
+.product-details{
+    display:inline-block;
+}
+
+.product-title h3{
+    font-weight: 400;
+    font-size: 26px;
+    color: #43484D;
+    letter-spacing: -2px;
+}
