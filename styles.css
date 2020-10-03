@@ -7,7 +7,7 @@ body{
     background-color: white;
     margin-left:auto;
     margin-right: auto;
-    width:800px;
+    max-width:800px;
 }
 
 .product-image img{
@@ -21,10 +21,15 @@ body{
 }
 
 .product-main-info{
+    width:100%;
     font-size: 16px;
     font-weight: 300;
     color: #86939E;
     line-height: 24px;
+    display:flexbox;
+}
+
+.bottom-border{
     border-bottom: 1px solid #E1E8EE;
     margin-bottom: 20px;
 }
@@ -87,3 +92,11 @@ body{
     background-position: center;
   }
   
+
+/* Responsive */
+@media (max-width: 940px) {
+    .product-main {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+  }
