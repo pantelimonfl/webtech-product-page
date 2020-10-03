@@ -11,17 +11,32 @@
 
     <link href="styles.css" rel="stylesheet">
 
+    <script>
+        function changeColor(color){
+            var imageElement = document.getElementById('product-image');
+            imageElement.src = "assets/product_main_"+color+".webp";
+            var titleElement = document.getElementById('product-color-in-title');
+            titleElement.innerText = capitalize(color);
+        }
+
+        function capitalize(string){
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+    </script>
 </head>
 
 <body>
     <div class="container">
         <div class="product-main">
             <div class="product-image">
-                <img src="assets/product_main.webp" />
+                <img src="assets/product_main_green.webp" id="product-image"/>
             </div>
             <div class="product-details">
                 <div class="product-title">
-                    <h3>iPhone 11 Pro Midnight Green 64GB</h3>
+                    <h3>iPhone 11 Pro Midnight 
+                        <span id="product-color-in-title">
+                            Green
+                        </span> 64GB</h3>
                 </div>
 
                 <div class="product-main-info">
@@ -29,6 +44,34 @@
                         Expanded field of view. iPhone 11 Pro lets you zoom from the Telephoto all the way out to the
                         new Ultra Wide camera, for an impressive 4x optical zoom range.
                     </p>
+
+                    <div class="product-color">
+                        <span>Color</span>
+            
+                        <div class="color-choose">
+                          <div>
+                            <input data-image="green" type="radio" id="green" name="color"
+                            onchange="changeColor('green')" checked>
+                            <label for="green"><span></span></label>
+                          </div>
+                          <div>
+                            <input data-image="gold" type="radio" id="gold" name="color" 
+                            onchange="changeColor('gold')">
+                            <label for="gold"><span></span></label>
+                          </div>
+                          <div>
+                            <input data-image="silver" type="radio" id="silver" name="color"
+                            onchange="changeColor('silver')">
+                            <label for="silver"><span></span></label>
+                          </div>
+                          <div>
+                            <input data-image="grey" type="radio" id="grey" name="color"
+                            onchange="changeColor('grey')">
+                            <label for="grey"><span></span></label>
+                          </div>
+                        </div>
+            
+                      </div>
                 </div>
             </div>
         </div>
